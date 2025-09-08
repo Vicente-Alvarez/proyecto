@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Transacciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="transacciones">
+  <h1>Simulador de Transacciones</h1>
+  <p>Ingresa tus datos para recargar dinero en tu cuenta.</p>
+
+  <form action="perfil.html" method="get">
+    <label for="titular">Nombre del titular</label>
+    <input type="text" id="titular" name="titular" placeholder="Ej: Juan Pérez" required pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{3,50}">
+
+    <label for="monto">Monto a recargar</label>
+    <input type="number" id="monto" name="monto" min="1" max="1000000" required>
+
+    <label for="numeros-tarjeta">Número de tarjeta</label>
+    <input type="text" id="numeros-tarjeta" name="numeros-tarjeta"
+           placeholder="1234567812345678"
+           pattern="\d{16}" maxlength="16" required
+           title="Debe contener exactamente 16 dígitos">
+
+    <label for="fecha-vencimiento">Fecha de vencimiento</label>
+    <input type="month" id="fecha-vencimiento" name="fecha-vencimiento" required>
+
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" name="cvv"
+           placeholder="123"
+           pattern="\d{3}" maxlength="3" required
+           title="Debe contener 3 dígitos">
+
+    <div class="button-group">
+      <button type="submit" class="btn-recargar">Recargar</button>
+      <button type="button" class="btn-volver" onclick="window.location.href='perfil.html'">Volver atrás</button>
+    </div>
+  </form>
+</body>
+</html>

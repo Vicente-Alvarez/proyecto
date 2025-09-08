@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro — Diamond Casino Royale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="registro">
+  
+  <button class="btn-volver" type="button" onclick="window.location.href='index.html'">Volver al menú</button>
+
+  <div class="login-container">
+    <h1><center>Casino</center></h1>
+    <h2><strong>Registro de usuario</strong></h2>
+
+    
+    <form action="acceso.html" method="get">
+      <label for="namecomplete">Nombre completo</label>
+      <input type="text" name="namecomplete" id="namecomplete" required placeholder="Juan Ignacio Perez Gonzalez" />
+
+      <label for="birthdate">Fecha de nacimiento</label>
+      <input type="date" name="birthdate" id="birthdate" required />
+
+      <label for="username">Nombre de usuario</label>
+      <input type="text" name="username" id="username" required placeholder="JuanPerez" />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" required placeholder="JuanPerez@correo.com"/>
+
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" required placeholder="*********" />
+
+      <label for="password2">Confirmar contraseña</label>
+      <input type="password" name="password2" id="password2" required placeholder="********"/>
+
+      <button type="submit" class="btn">Registrarme</button>
+    </form>
+  </div>
+</body>
+</html>
